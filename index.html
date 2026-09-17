@@ -11,76 +11,230 @@
 
 <style>
 
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background: #fffdf8;
-  color: #164b3d;
+body{
+font-family:Arial,sans-serif;
+background:#fffdf8;
+color:#164b3d;
+line-height:1.6;
 }
 
-header {
-  background: #fffdf8;
-  padding: 20px;
-  border-bottom: 1px solid #e5eee9;
+header{
+padding:20px;
+background:#fffdf8;
+border-bottom:1px solid #e5eee9;
 }
 
-.logo {
-  font-size: 26px;
-  font-weight: bold;
-  color: #087f61;
+.logo{
+font-size:26px;
+font-weight:bold;
+color:#087f61;
 }
 
-.logo span {
-  color: #f47b35;
+.logo span{
+color:#f47b35;
 }
 
-.hero {
-  min-height: 80vh;
-  padding: 70px 20px;
-  display: flex;
-  align-items: center;
-  background: #eff9f5;
+section{
+padding:70px 20px;
 }
 
-.hero-content {
-  max-width: 700px;
-  margin: auto;
-  text-align: center;
+.hero{
+min-height:80vh;
+display:flex;
+align-items:center;
+background:#eff9f5;
 }
 
-.hero h1 {
-  font-size: 52px;
-  line-height: 1.1;
-  margin-bottom: 20px;
+.container{
+max-width:1000px;
+margin:auto;
 }
 
-.hero h1 span {
-  color: #f47b35;
+.hero-content{
+max-width:700px;
+margin:auto;
+text-align:center;
 }
 
-.hero p {
-  font-size: 18px;
-  color: #60736b;
-  margin-bottom: 30px;
+.hero h1{
+font-size:52px;
+line-height:1.1;
+margin-bottom:20px;
 }
 
-.button {
-  display: inline-block;
-  padding: 15px 25px;
-  background: #087f61;
-  color: white;
-  text-decoration: none;
-  border-radius: 30px;
-  font-weight: bold;
+.hero h1 span{
+color:#f47b35;
 }
 
-.button:hover {
-  background: #05684f;
+.hero p{
+font-size:18px;
+color:#60736b;
+margin-bottom:30px;
+}
+
+.button{
+display:inline-block;
+padding:15px 25px;
+background:#087f61;
+color:white;
+text-decoration:none;
+border-radius:30px;
+font-weight:bold;
+}
+
+.button:hover{
+background:#05684f;
+}
+
+.about{
+background:#fffdf8;
+}
+
+.about-grid{
+display:flex;
+flex-wrap:wrap;
+gap:40px;
+align-items:center;
+}
+
+.about-image,
+.about-text{
+flex:1;
+min-width:280px;
+}
+
+.about-image img{
+width:100%;
+height:420px;
+object-fit:cover;
+border-radius:25px;
+}
+
+.tag{
+display:inline-block;
+background:#e0f4ed;
+color:#087f61;
+padding:8px 15px;
+border-radius:30px;
+font-weight:bold;
+margin-bottom:15px;
+}
+
+h2{
+font-size:40px;
+line-height:1.1;
+margin-bottom:18px;
+}
+
+.about-text p{
+color:#60736b;
+font-size:17px;
+margin-bottom:15px;
+}
+
+.about-text ul{
+list-style:none;
+margin:20px 0 25px;
+color:#285e50;
+font-weight:bold;
+}
+
+.about-text li{
+margin-bottom:10px;
+}
+
+.services{
+background:#eff9f5;
+text-align:center;
+}
+
+.services-intro{
+color:#60736b;
+font-size:17px;
+max-width:650px;
+margin:0 auto 40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+gap:20px;
+text-align:left;
+}
+
+.card{
+background:white;
+padding:28px;
+border-radius:20px;
+}
+
+.card h3{
+color:#164b3d;
+}
+
+.card p{
+color:#60736b;
+margin-top:10px;
+}
+
+.why{
+background:#fffdf8;
+text-align:center;
+}
+
+.why-intro{
+color:#60736b;
+font-size:17px;
+max-width:650px;
+margin:0 auto 40px;
+}
+
+.why-card{
+padding:28px;
+background:#eff9f5;
+border-radius:20px;
+text-align:left;
+}
+
+.icon{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.why-card h3{
+color:#164b3d;
+}
+
+.why-card p{
+color:#60736b;
+margin-top:10px;
+}
+
+.center-button{
+text-align:center;
+margin-top:40px;
+}
+
+@media(max-width:600px){
+
+.hero h1{
+font-size:40px;
+}
+
+h2{
+font-size:32px;
+}
+
+.about-image img{
+height:330px;
+}
+
 }
 
 </style>
@@ -100,6 +254,8 @@ Train With <span>Abby</span>
 </header>
 
 
+<!-- HERO -->
+
 <section class="hero">
 
 <div class="hero-content">
@@ -118,130 +274,67 @@ stay consistent and work toward your goals.
 class="button"
 href="https://wa.me/2348030425401?text=Hi%20Abby!%20I%20found%20Train%20With%20Abby%20and%20I'm%20interested%20in%20your%20fitness%20coaching."
 target="_blank">
-
 Start Your Fitness Journey →
-
 </a>
 
 </div>
 
 </section>
 
+
 <!-- ABOUT ABBY -->
 
-<section style="
-padding:70px 20px;
-background:#fffdf8;
-">
+<section class="about">
 
-<div style="
-max-width:1000px;
-margin:auto;
-display:flex;
-flex-wrap:wrap;
-gap:40px;
-align-items:center;
-">
+<div class="container">
 
-<div style="
-flex:1;
-min-width:280px;
-">
+<div class="about-grid">
+
+<div class="about-image">
 
 <img
 src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=800&q=80"
-alt="Fitness coaching"
-style="
-width:100%;
-height:420px;
-object-fit:cover;
-border-radius:25px;
-">
+alt="Fitness coaching">
 
 </div>
 
 
-<div style="
-flex:1;
-min-width:280px;
-">
+<div class="about-text">
 
-<p style="
-display:inline-block;
-background:#e0f4ed;
-color:#087f61;
-padding:8px 15px;
-border-radius:30px;
-font-weight:bold;
-margin-bottom:15px;
-">
+<div class="tag">
 MEET ABBY
-</p>
+</div>
 
-<h2 style="
-font-size:40px;
-line-height:1.1;
-margin-bottom:18px;
-color:#164b3d;
-">
+<h2>
 Fitness is more than just a workout.
 </h2>
 
-<p style="
-color:#60736b;
-font-size:17px;
-margin-bottom:15px;
-">
+<p>
 Train With Abby is about helping you become stronger,
 more confident and more consistent with your fitness journey.
 </p>
 
-<p style="
-color:#60736b;
-font-size:17px;
-margin-bottom:20px;
-">
+<p>
 Whether you're just starting out or ready to improve your
 training, we'll focus on practical workouts and clear goals.
 </p>
 
-<ul style="
-list-style:none;
-margin-bottom:25px;
-color:#285e50;
-font-weight:bold;
-">
+<ul>
 
-<li style="margin-bottom:10px;">
-✓ Personalized training guidance
-</li>
+<li>✓ Personalized training guidance</li>
 
-<li style="margin-bottom:10px;">
-✓ Simple and practical workouts
-</li>
+<li>✓ Simple and practical workouts</li>
 
-<li style="margin-bottom:10px;">
-✓ Accountability and motivation
-</li>
+<li>✓ Accountability and motivation</li>
 
-<li style="margin-bottom:10px;">
-✓ Progress-focused training
-</li>
+<li>✓ Progress-focused training</li>
 
 </ul>
 
 <a
+class="button"
 href="https://wa.me/2348030425401?text=Hi%20Abby!%20I'd%20like%20to%20learn%20more%20about%20your%20fitness%20coaching."
-target="_blank"
-style="
-display:inline-block;
-padding:14px 23px;
-background:#087f61;
-color:white;
-text-decoration:none;
-border-radius:30px;
-font-weight:bold;
-">
+target="_blank">
 Talk With Abby →
 </a>
 
@@ -249,129 +342,78 @@ Talk With Abby →
 
 </div>
 
+</div>
+
 </section>
+
 
 <!-- SERVICES -->
 
-<section style="
-padding:70px 20px;
-background:#eff9f5;
-">
+<section class="services">
 
-<div style="
-max-width:1000px;
-margin:auto;
-text-align:center;
-">
+<div class="container">
 
-<p style="
-display:inline-block;
-background:#e0f4ed;
-color:#087f61;
-padding:8px 15px;
-border-radius:30px;
-font-weight:bold;
-margin-bottom:15px;
-">
+<div class="tag">
 WHAT ABBY OFFERS
-</p>
+</div>
 
-<h2 style="
-font-size:40px;
-line-height:1.1;
-margin-bottom:15px;
-color:#164b3d;
-">
+<h2>
 Training designed around your goals.
 </h2>
 
-<p style="
-color:#60736b;
-font-size:17px;
-max-width:650px;
-margin:0 auto 40px;
-">
+<p class="services-intro">
 Whether your goal is to lose weight, build strength or simply
 become more consistent, Train With Abby gives you practical
 guidance to keep moving forward.
 </p>
 
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
-gap:20px;
-text-align:left;
-">
+<div class="cards">
 
 
-<div style="
-background:white;
-padding:28px;
-border-radius:20px;
-">
+<div class="card">
 <h3>🏋️ Personal Coaching</h3>
-<p style="color:#60736b;margin-top:10px;">
+<p>
 Personalized guidance to help you train with purpose.
 </p>
 </div>
 
 
-<div style="
-background:white;
-padding:28px;
-border-radius:20px;
-">
+<div class="card">
 <h3>🔥 Weight Loss</h3>
-<p style="color:#60736b;margin-top:10px;">
+<p>
 Build healthier habits and work toward your weight goals.
 </p>
 </div>
 
 
-<div style="
-background:white;
-padding:28px;
-border-radius:20px;
-">
+<div class="card">
 <h3>💪 Strength Training</h3>
-<p style="color:#60736b;margin-top:10px;">
+<p>
 Work on strength, fitness and overall physical performance.
 </p>
 </div>
 
 
-<div style="
-background:white;
-padding:28px;
-border-radius:20px;
-">
+<div class="card">
 <h3>🏠 Home Workouts</h3>
-<p style="color:#60736b;margin-top:10px;">
+<p>
 Simple workout options you can do from home.
 </p>
 </div>
 
 
-<div style="
-background:white;
-padding:28px;
-border-radius:20px;
-">
+<div class="card">
 <h3>🎯 Fitness Guidance</h3>
-<p style="color:#60736b;margin-top:10px;">
+<p>
 Clear direction to help you stay focused on your goals.
 </p>
 </div>
 
 
-<div style="
-background:white;
-padding:28px;
-border-radius:20px;
-">
+<div class="card">
 <h3>⚡ Fitness Challenges</h3>
-<p style="color:#60736b;margin-top:10px;">
+<p>
 Stay motivated and challenge yourself to become better.
 </p>
 </div>
@@ -383,129 +425,84 @@ Stay motivated and challenge yourself to become better.
 
 </section>
 
-  <!-- WHY TRAIN WITH ABBY -->
 
-<section style="
-padding:70px 20px;
-background:#fffdf8;
-">
+<!-- WHY TRAIN WITH ABBY -->
 
-<div style="
-max-width:1000px;
-margin:auto;
-text-align:center;
-">
+<section class="why">
 
-<p style="
-display:inline-block;
-background:#e0f4ed;
-color:#087f61;
-padding:8px 15px;
-border-radius:30px;
-font-weight:bold;
-margin-bottom:15px;
-">
+<div class="container">
+
+<div class="tag">
 WHY TRAIN WITH ABBY
-</p>
+</div>
 
-<h2 style="
-font-size:40px;
-line-height:1.1;
-margin-bottom:15px;
-color:#164b3d;
-">
+<h2>
 Your goals. Your journey. Your progress.
 </h2>
 
-<p style="
-color:#60736b;
-font-size:17px;
-max-width:650px;
-margin:0 auto 40px;
-">
+<p class="why-intro">
 Fitness becomes easier to maintain when you have the right
 guidance, structure and motivation behind you.
 </p>
 
 
-<div style="
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-gap:20px;
-text-align:left;
-">
+<div class="cards">
 
 
-<div style="
-padding:28px;
-background:#eff9f5;
-border-radius:20px;
-">
+<div class="why-card">
 
-<div style="font-size:32px;margin-bottom:15px;">🎯</div>
+<div class="icon">🎯</div>
 
-<h3 style="color:#164b3d;">
+<h3>
 Goal Focused
 </h3>
 
-<p style="color:#60736b;margin-top:10px;">
+<p>
 Train with clear goals and a plan that keeps you moving forward.
 </p>
 
 </div>
 
 
-<div style="
-padding:28px;
-background:#eff9f5;
-border-radius:20px;
-">
+<div class="why-card">
 
-<div style="font-size:32px;margin-bottom:15px;">🤝</div>
+<div class="icon">🤝</div>
 
-<h3 style="color:#164b3d;">
+<h3>
 Personal Support
 </h3>
 
-<p style="color:#60736b;margin-top:10px;">
+<p>
 Get guidance and encouragement throughout your fitness journey.
 </p>
 
 </div>
 
 
-<div style="
-padding:28px;
-background:#eff9f5;
-border-radius:20px;
-">
+<div class="why-card">
 
-<div style="font-size:32px;margin-bottom:15px;">📈</div>
+<div class="icon">📈</div>
 
-<h3 style="color:#164b3d;">
+<h3>
 Progress Mindset
 </h3>
 
-<p style="color:#60736b;margin-top:10px;">
+<p>
 Focus on steady improvement instead of trying to be perfect.
 </p>
 
 </div>
 
 
-<div style="
-padding:28px;
-background:#eff9f5;
-border-radius:20px;
-">
+<div class="why-card">
 
-<div style="font-size:32px;margin-bottom:15px;">🔥</div>
+<div class="icon">🔥</div>
 
-<h3 style="color:#164b3d;">
+<h3>
 Stay Consistent
 </h3>
 
-<p style="color:#60736b;margin-top:10px;">
+<p>
 Build routines that can help you stay committed to your goals.
 </p>
 
@@ -514,9 +511,23 @@ Build routines that can help you stay committed to your goals.
 
 </div>
 
+
+<div class="center-button">
+
+<a
+class="button"
+href="https://wa.me/2348030425401?text=Hi%20Abby!%20I%20found%20Train%20With%20Abby%20and%20I'd%20like%20to%20get%20started."
+target="_blank">
+Get Started With Abby →
+</a>
+
+</div>
+
 </div>
 
 </section>
+
+
 </body>
 
-</html>
+  </html>
